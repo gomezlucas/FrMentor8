@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css?family=Karla:400,700&display=swap");
+
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --brightYellow: hsl(71, 73%, 54%);
+  --lightGray: hsl(204, 43%, 93%);
+  --grayishBlue: hsl(218, 22%, 67%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  background-color: var(--lightGray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.main-header {
+  min-height: 80vh;
+  width: 50%;
+  background: red;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "price info";
+  grid-template-rows: 45% 55%;
+  grid-template-columns: 50% 50%;
+  box-shadow: 0px 3px 5px grey;
+}
+
+/* Grid definition */
+.title {
+  grid-area: title;
+  background-color: #fafafa;
+  padding: 3rem;
+}
+
+.price {
+  grid-area: price;
+  background-color: var(--cyan);
+  padding: 3rem;
+}
+
+.info {
+  grid-area: info;
+  background-color: hsl(179, 44%, 51%);
+  padding: 3rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .main-header {
+    width: 70%;
+    grid-template-areas:
+      "title"
+      "price"
+      "info";
+    grid-template-rows: 35%;
+    grid-template-columns: 100%;
+  }
+}
+
+/* End grid definition*/
+
+/*title*/
+.title-main {
+  color: var(--cyan);
+  font-size: 1.5rem;
+  margin-bottom: 1.4rem;
+}
+
+.title-sub {
+  color: var(--brightYellow);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.title-text {
+  color: var(--grayishBlue);
+  line-height: 1.4rem;
+  width: 95%;
+}
+/*end title*/
+
+/*price */
+.price {
+  color: white;
+}
+
+.price-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.price-number {
+  font-weight: 700;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.month {
+  font-weight: 300;
+  font-size: 1rem;
+  color: hsl(179, 66%, 53%);
+  margin-left: 1rem;
+  flex-grow: 1;
+}
+
+.button {
+  margin-top: 2rem;
+  padding: 0.9rem 0.75rem;
+  background: var(--brightYellow);
+  border: none;
+  color: #fafafa;
+  width: 100%;
+  border-radius: 8px;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0px 3px 4px grey;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  display: block;
+  text-align: center;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  background-color: white;
+  color: var(--brightYellow);
+}
+/*end price*/
+/*info*/
+.info {
+  color: white;
+}
+
+.info-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.info-text {
+  font-size: 0.8rem;
+  color: white;
+  width: 70%;
+  list-style-type: none;
+  line-height: 1.3rem;
+}
+
+/*end info*/
+/*footer */
+.attribution {
+     margin-top: 1rem;
+    font-size: 11px;
+ }
+
+  .attribution a {
+    color: var(--brightYellow);
+    text-decoration: none;
+  }
+/*end footer*/
